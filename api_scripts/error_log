@@ -1,0 +1,5 @@
+[17-Nov-2016 10:29:23 UTC] PHP Fatal error:  Call to undefined function int() in /home/jdtayyub/public_html/api_scripts/manage_hits.php on line 98
+[17-Nov-2016 15:09:06 UTC] PHP Notice:  Trying to get property of non-object in /home/jdtayyub/public_html/api_scripts/get_hit.php on line 59
+[17-Nov-2016 15:09:42 UTC] PHP Notice:  Trying to get property of non-object in /home/jdtayyub/public_html/api_scripts/get_hit.php on line 60
+[18-Nov-2016 17:44:34 UTC] PHP Warning:  scandir(../vids/vid3/images): failed to open dir: No such file or directory in /home/jdtayyub/public_html/api_scripts/create_hits.php on line 65
+[18-Nov-2016 17:44:34 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/jdtayyub/public_html/api_scripts/create_hits.php on line 65

@@ -1,0 +1,331 @@
+#page-wrap {
+  width: 1188px;
+  margin: 0 auto;
+  border: black 1px solid;
+}
+
+
+
+body {
+  font-size: smaller;
+  font-family: sans-serif;
+}
+
+p {
+  display: inline-block;
+
+}
+
+#player-container {
+  width: 710px;
+  float:left;
+}
+
+h1 {
+  text-align:center;
+}
+
+#frameNum {
+  font-size: 33px;
+  padding:0;
+  margin:6px 0px 0px 8px;
+}
+
+#controls {
+  margin-top: 51px;
+  margin-left: 20px;
+  float: right;
+  text-align: center;
+  width: 450px;
+}
+
+.sframe, .eframe {
+  width: 60px;
+}
+
+.actLabel {
+  width: 173px;
+}
+
+@-moz-document url-prefix() {
+  .field.label {
+    top: 0px;
+  }
+
+  .myownbutton.addAnnon {
+    top: 0px;
+  }
+
+  div.field {
+    margin-right:60px;
+  }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit,.edit:link,.edit:visited, .delete,.delete:link,.delete:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+.line {
+  width: 435px;
+  height: 10px;
+  border-bottom: 1px solid black;
+  clear: both;
+}
+
+#ann-table {
+  height: 320px;
+  width: 448px;
+  display: block;
+  overflow-y: scroll;
+  border: 1px solid black;
+  margin-bottom: 8px;
+}
+
+
+.field {
+  display: inline-block;
+  margin-right: 80px;
+}
+
+.field p {
+  padding:0;
+  margin:0;
+  display: block;
+  float:none;
+}
+
+.myownbutton.getFrame {
+  margin-top: 10px;
+  display: block;
+  width: 73px;
+}
+
+.label {
+  position: relative;
+  top: -13px;
+
+}
+
+.addAnnon {
+  height: 45px;
+  position: relative;
+  top: -22px;
+  font-weight: bold;
+}
+
+#buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.imp {
+  color: red;
+  float: none;
+  padding: 0;
+  display: block;
+}
+
+
+.myButton {
+  margin-top: 38px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #a4e271;
+	box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809));
+	background:-moz-linear-gradient(top, #89c403 5%, #77a809 100%);
+	background:-webkit-linear-gradient(top, #89c403 5%, #77a809 100%);
+	background:-o-linear-gradient(top, #89c403 5%, #77a809 100%);
+	background:-ms-linear-gradient(top, #89c403 5%, #77a809 100%);
+	background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809',GradientType=0);
+	background-color:#89c403;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:9px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77a809), color-stop(1, #89c403));
+	background:-moz-linear-gradient(top, #77a809 5%, #89c403 100%);
+	background:-webkit-linear-gradient(top, #77a809 5%, #89c403 100%);
+	background:-o-linear-gradient(top, #77a809 5%, #89c403 100%);
+	background:-ms-linear-gradient(top, #77a809 5%, #89c403 100%);
+	background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77a809', endColorstr='#89c403',GradientType=0);
+	background-color:#77a809;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.buttons {
+  border: 2px solid black;
+  height: 80px;
+}
+
+.buttons div {
+
+  width: 62px;
+  height: 62px;
+  float: left;
+  margin-right: 99px;
+  background-image : url(media/sprite.png);
+  margin-top: 10px;
+}
+
+.buttons #preBulk {
+  background-position: -16px 139px;
+}
+
+.buttons #preFrame {
+  background-position: -220px 75px;
+}
+
+.buttons #play-pause {
+  background-position: 213px -11px;
+}
+
+.buttons #nexFrame {
+  background-position: -220px 139px;
+}
+
+
+.buttons #nexBulk {
+  margin-right: 0px;
+  background-position: -149px 139px;
+}
+
+#questions div,#questions input{
+  float: left;
+}
+#questions input{
+  margin: 0 70px 0 10px;
+}
+
+#intervalCont {
+  border: 1px solid black;
+  height: 180px;
+}
+.heading {
+  text-align:-webkit-auto;
+  margin-top:2px;
+  margin-bottom: 2px;
+}
+#mainWrapper {
+  overflow-x:scroll;/* make it jquery scroll with mouse */
+}
+#mainCont {
+  height: 128px;
+  background-color: rgb(248, 250, 239);
+  position: relative;
+  padding-left: 3px;
+}
+#frameAxis {
+ height:30px;
+ background-color: aliceblue;
+ opacity:0.6;
+ display: inline-block;
+}
+.axisLine {
+  height: 1px;
+  background-color:gray;
+  position: relative;
+  height: 1px;
+  background-color: black;
+}
+.ticks {
+  top: -7px;
+  position: relative;
+  white-space: nowrap;
+}
+.major {
+  font-size: 17px;
+  top: 3px;
+  position: relative;
+}
+.major .text {
+  position: absolute;
+    top: 17px;
+    left: -1px;
+    font-size: 12px;
+}
+.intervalRect {
+  width:20px;
+  position: absolute;
+  background-color: aqua;
+  height: 5px;
+  background: #bde5ff;
+  background-image: -webkit-linear-gradient(top, #bde5ff, #009afa);
+  background-image: -moz-linear-gradient(top, #bde5ff, #009afa);
+  background-image: -ms-linear-gradient(top, #bde5ff, #009afa);
+  background-image: -o-linear-gradient(top, #bde5ff, #009afa);
+  background-image: linear-gradient(to bottom, #bde5ff, #009afa);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  padding: 5px 0px 5px 0px;
+  border: solid #1f628d 1px;
+  text-decoration: none;
+}
+.dashed {
+  border-bottom: 1px gray dashed;
+  /* height: 0px; */
+  top: 9px;
+  position: relative;
+}
+.intervalRow {
+  position:absolute;
+  width: 100%;
+}
+#row-1{
+  bottom: 25px;
+}
+#row-2{
+  bottom: 50px;
+}
+
+#length_lbl{
+    background-color: antiquewhite;
+    width: 479px;
+    display: block;
+    color: red;
+    position: absolute;
+    left: -150px;
+    z-index: 999;
+    top: 36px;
+    height: 50px;
+    border: 1px solid gray;
+visibility: hidden;
+}
