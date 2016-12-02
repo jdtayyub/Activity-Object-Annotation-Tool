@@ -2,10 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-$AWS_ACCESS_KEY_ID = "AKIAJKM6LPZABA4IEBLA";
-$AWS_SECRET_ACCESS_KEY = "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";
-$SERVICE_NAME = "AWSMechanicalTurkRequester";
-$SERVICE_VERSION = "2014-08-15";
+include("parameters.php");
+
 
 $operation = "CreateHIT";
 $title = "Highly Paid: Simple activity video annotation (BONUSES up to 3.5 USD per assignment based on work quality)";
@@ -23,30 +21,7 @@ $frame_height = 800;
 $timestamp = generate_timestamp(time());
 $signature = generate_signature($SERVICE_NAME, $operation, $timestamp, $AWS_SECRET_ACCESS_KEY);
 
-function generate_timestamp($time) {
-  return gmdate("Y-m-d\TH:i:s\Z", $time);
-}
-
-function hmac_sha1($key, $s) {
-  return pack("H*", sha1((str_pad($key, 64, chr(0x00)) ^ (str_repeat(chr(0x5c), 64))) .
-         pack("H*", sha1((str_pad($key, 64, chr(0x00)) ^ (str_repeat(chr(0x36), 64))) . $s))));
-}
-
-function generate_signature($service, $operation, $timestamp, $secret_access_key) {
-  $string_to_encode = $service . $operation . $timestamp;
-  $hmac = hmac_sha1($secret_access_key, $string_to_encode);
-  $signature = base64_encode($hmac);
-  return $signature;
-}
-
-function constructQuestion($url, $frame_height) {
-     $question1 = '<ExternalQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd">';
-     $question1 .= '<ExternalURL>'.$url.'</ExternalURL>';
-     $question1 .= '<FrameHeight>'.$frame_height.'</FrameHeight>';
-     $question1 .= '</ExternalQuestion>';
-
-     return $question1;
-}
+include("api_functions.php");
 
 
 //scan the video folder

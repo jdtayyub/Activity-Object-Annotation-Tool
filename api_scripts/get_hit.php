@@ -2,11 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
+include("parameters.php");
 
-$AWS_ACCESS_KEY_ID = "AKIAJKM6LPZABA4IEBLA";
-$AWS_SECRET_ACCESS_KEY = "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";
-$SERVICE_NAME = "AWSMechanicalTurkRequester";
-$SERVICE_VERSION = "2014-08-15";
 
 $operation = "GetHIT";
 $HITId=$_REQUEST['hid'];
@@ -15,31 +12,7 @@ $timestamp = generate_timestamp(time());
 $signature = generate_signature($SERVICE_NAME, $operation, $timestamp, $AWS_SECRET_ACCESS_KEY);
 
 
-
-function generate_timestamp($time) {
-  return gmdate("Y-m-d\TH:i:s\Z", $time);
-}
-
-function hmac_sha1($key, $s) {
-  return pack("H*", sha1((str_pad($key, 64, chr(0x00)) ^ (str_repeat(chr(0x5c), 64))) .
-         pack("H*", sha1((str_pad($key, 64, chr(0x00)) ^ (str_repeat(chr(0x36), 64))) . $s))));
-}
-
-function generate_signature($service, $operation, $timestamp, $secret_access_key) {
-  $string_to_encode = $service . $operation . $timestamp;
-  $hmac = hmac_sha1($secret_access_key, $string_to_encode);
-  $signature = base64_encode($hmac);
-  return $signature;
-}
-
-
-function print_errors($error_nodes) {
-  print "There was an error processing your request:\n";
-  foreach ($error_nodes as $error) {
-    print "  Error code:    " . $error->Code . "\n";
-    print "  Error message: " . $error->Message . "\n";
-  }
-}
+include("api_functions.php");
 
 
 $url2 = "https://mechanicalturk.amazonaws.com/onca/xml"
