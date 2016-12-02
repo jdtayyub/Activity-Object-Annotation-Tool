@@ -3,8 +3,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 
-$AWS_ACCESS_KEY_ID = "AKIAJKM6LPZABA4IEBLA";
-$AWS_SECRET_ACCESS_KEY = "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";
+$AWS_ACCESS_KEY_ID = "";
+$AWS_SECRET_ACCESS_KEY = "";
 $SERVICE_NAME = "AWSMechanicalTurkRequester";
 $SERVICE_VERSION = "2014-08-15";
 
